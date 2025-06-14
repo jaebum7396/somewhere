@@ -31,9 +31,9 @@
 <br><br><br>
 
 ## 📷 DEMO
-| 메인 화면 | 사주 정보 입력 | 매칭 대기 | 채팅 화면 |
-|:--:|:--:|:--:|:--:|
-| <img width="200" alt="메인" src="https://github.com/user-attachments/assets/a7581e48-822f-4abe-85ca-1f63bfcc0a17" /> | <img width="200" alt="사주입력" src="https://github.com/user-attachments/assets/b917762a-dd90-4710-a145-cceb6b765a13" /> | <img width="200" alt="매칭대기" src="https://github.com/user-attachments/assets/83819ed0-9041-40c7-a3f0-e66206fd3433" /> | <img width="200" alt="채팅" src="https://github.com/user-attachments/assets/f2c3d4e5-6789-1234-5678-91011121314a" /> |
+| 메인 화면 | 채팅 화면 |
+|:--:|:--:|
+| <img width="200" alt="메인" src="" /> | <img width="200" alt="채팅" src="" /> |
 
 <br><br><br>
 
