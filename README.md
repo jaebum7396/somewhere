@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://destiny-chat.com/logo.png" alt="운명 사서함" width="50%">
+  <img src="https://destiny-post.com/logo.png" alt="운명 사서함" width="50%">
 </p>
 
 <h3 align="center">🔮 국내 유일! 명리학 기반 사주 랜덤 채팅 서비스! 🔮</h3>
