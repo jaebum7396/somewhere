@@ -108,6 +108,7 @@
 
 ### 🔄 **마이크로서비스 아키텍처**
 
+```mermaid
 graph TB
     Client[👤 클라이언트] --> Gateway[🌐 API Gateway<br/>destiny-post.com]
     
@@ -163,7 +164,10 @@ graph TB
     LunarCalendar --> PostgreSQL
     
     Redis --> RedisCache[⚡ Redis Cache<br/>세션 & 토큰 관리]
-🏗️ 사주 기반 매칭 플로우
+```
+
+**🏗️ 사주 기반 매칭 플로우**
+```
 ┌─────────────────────────────────────────────────────────┐
 │              🔍 Eureka Discovery Server                  │
 │                서비스 등록 & 발견                         │
@@ -229,19 +233,20 @@ graph TB
                     │ 🐘 PostgreSQL   │
                     │   데이터 저장    │
                     └─────────────────┘
+```
 
-**💡 핵심 메시지 처리 흐름:**
-1. **Socket Publisher** → 실시간 메시지 발행
-2. **Redis Streams** → 메시지 큐잉 및 분산
-3. **Message Consumer (병렬)** → 비동기 CRUD 처리
-4. **PostgreSQL** → 최종 데이터 저장
+**💡 핵심 사주 매칭 프로세스:**
+1. **User Info → Lunar Calendar** → 사주 생성 및 오늘의 운세 계산
+2. **Matcher → User Info** → 사주 정보 기반 매칭 대상 선별
+3. **Matcher → LLM Connector** → AI 기반 궁합 분석 및 매칭 점수 산출
+4. **Socket Publisher (병렬)** → 실시간 매칭 결과 전송
 
 ### ⚡ **실시간 통신 & 메시지 처리**
 - **STOMP over WebSocket**: 실시간 채팅 및 매칭 알림
 - **Redis Streams 기반 메시지 아키텍처**: 
-  - **Socket Publisher**: WebSocket 연결 관리 및 실시간 메시지 발송
-  - **Message Consumer**: Redis Stream에서 메시지 소비 및 배치 처리
-  - **채팅 서비스와 병렬 구조**: 높은 처리량과 장애 격리를 위한 독립적 서비스 운영
+  - **Socket Publisher (병렬)**: WebSocket 연결 관리 및 실시간 메시지 발송
+  - **Message Consumer (병렬)**: Redis Stream에서 메시지 소비 및 배치 처리
+  - **높은 처리량과 장애 격리**: 독립적 서비스 운영으로 안정성 확보
 - **Redis Pub/Sub**: 채팅방 알림 및 상태 변경 실시간 브로드캐스트
 - **LLM Connector**: AI 대화 조언을 위한 독립적 LLM 통신 서비스
 
@@ -273,7 +278,7 @@ graph TB
 
 ### 🎨 **v1.2 (3차)** - 아바타 시스템  
 - 🔄 **AI 아바타 생성**: 사진 + 사주 요소 기반 개성 있는 프로필 생성
-- 🔄 **아바타 커스터마이징**: 사주 특성이 반영된 AI 아바타 생성
+- 🔄 **아바타 커스터마이징**: 사주 특성이 반영된 아바타 꾸미기
 - 🔄 **아바타 매칭**: 시각적 매력도를 고려한 매칭 옵션
 
 ### 🌐 **v1.3 (4차)** - 커뮤니티 기능
@@ -288,13 +293,45 @@ graph TB
   - 상세 사주 분석 리포트  
   - 전문가 사주 상담 서비스
 
-### 🔧 **모니터링 & 알림**
+<br><br><br>
+
+## 🔧 모니터링 & 알림
 - Docker 컨테이너 기반 서비스 상태 모니터링
 - Redis 연결 상태 및 메모리 사용량 추적
 - 실시간 에러 로그 및 알림 시스템
 
+<br><br><br>
+
+## 🚀 빠른 시작
+
+### 📋 **사전 준비사항**
+```bash
+- Java 17+
+- Docker & Docker Compose  
+- PostgreSQL 13+
+- Redis 7.0+
+```
+
+### ⚙️ **환경 설정**
+```bash
+# 프로젝트 클론
+git clone https://github.com/your-repo/destiny-chat.git
+cd destiny-chat
+
+# 환경변수 설정
+cp application-example.yml application-local.yml
+# application-local.yml 파일에서 DB 및 Redis 정보 수정
+
+# Docker 컨테이너 실행  
+docker-compose up -d
+
+# 애플리케이션 실행
+./gradlew bootRun
+```
+
 ### 🌐 **접속 정보**
 - **메인 서비스**: https://destiny-post.com
+
 <br><br><br>
 
 ## 👥 개발팀
