@@ -338,8 +338,8 @@ docker-compose up -d
 
 | 구성원 | GitHub | 역할 |
 |--------|--------|------|
-| 주재범 | [@jaebum7396](https://github.com/jaebum7396) | 백엔드 아키텍처, 인프라, 사주 분석 시스템 |
-| 팀원2 | [@teammate2](https://github.com/teammate2) | 프론트엔드, UI/UX, 채팅 인터페이스 |
+| 주재범 | [@jaebum7396](https://github.com/jaebum7396) | 아키텍처, 인프라, 프론트엔드, 백엔드 |
+| 배소연 | [@thdus12](https://github.com/thdus12) | 기획, 디자인, 프론트엔드, 백엔드 |
 
 <br><br><br>
 
