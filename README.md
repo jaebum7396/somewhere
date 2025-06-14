@@ -300,33 +300,6 @@ graph TB
 
 <br><br><br>
 
-## 🚀 빠른 시작
-
-### 📋 **사전 준비사항**
-```bash
-- Java 17+
-- Docker & Docker Compose  
-- PostgreSQL 13+
-- Redis 7.0+
-```
-
-### ⚙️ **환경 설정**
-```bash
-# 프로젝트 클론
-git clone https://github.com/your-repo/destiny-chat.git
-cd destiny-chat
-
-# 환경변수 설정
-cp application-example.yml application-local.yml
-# application-local.yml 파일에서 DB 및 Redis 정보 수정
-
-# Docker 컨테이너 실행  
-docker-compose up -d
-
-# 애플리케이션 실행
-./gradlew bootRun
-```
-
 ### 🌐 **접속 정보**
 - **메인 서비스**: https://destiny-post.com
 
