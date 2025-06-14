@@ -16,8 +16,8 @@
 ## 🌟 프로젝트 소개
 **운명 사서함**은 전통 명리학과 현대 기술을 결합한 혁신적인 랜덤 채팅 서비스입니다.
 
-단순한 랜덤 매칭을 넘어, 사주팔자 분석을 통해 궁합이 좋은 상대를 우선적으로 매칭해주고,  
-대화 중에도 상대방의 성향과 특성을 고려한 맞춤형 대화 가이드를 제공합니다.
+사주팔자 분석을 통해 상대와의 궁합과 그에 따른 점수를 노출해 선택의 도움을 주고,  
+대화 중에도 상대방의 성향과 특성을 고려한 맞춤형 대화 가이드를 제공하기 위해 개발하였습니다.
 
 현대인들의 진정한 만남에 대한 갈증을 해소하고,  
 의미 있는 인연을 만들어가는 **새로운 소셜 플랫폼**입니다.
@@ -67,7 +67,6 @@
 - 어색한 순간을 자연스럽게 넘어갈 수 있는 대화 팁
 
 ### 📊 **상세 궁합 분석**
-- 연애운, 결혼운, 사업운 등 다각도 궁합 해석
 - 서로의 장단점과 보완점 상세 분석
 - 관계 발전 단계별 조언 및 주의사항 제공
 - 장기적 관계 전망과 조화로운 만남 방향 제시
@@ -211,7 +210,7 @@ graph TB
   - **Socket Publisher**: WebSocket 연결 관리 및 실시간 메시지 발송
   - **Message Consumer**: Redis Stream에서 메시지 소비 및 배치 처리
   - **채팅 서비스와 병렬 구조**: 높은 처리량과 장애 격리를 위한 독립적 서비스 운영
-- **Redis Pub/Sub**: 채팅방 알림 및 상태 변경 브로드캐스트
+- **Redis Pub/Sub**: 채팅방 알림 및 상태 변경 실시간 브로드캐스트
 - **LLM Connector**: AI 대화 조언을 위한 독립적 LLM 통신 서비스
 
 ### 🔐 **보안 & 인증**
@@ -242,7 +241,7 @@ graph TB
 
 ### 🎨 **v1.2 (3차)** - 아바타 시스템  
 - 🔄 **AI 아바타 생성**: 사진 + 사주 요소 기반 개성 있는 프로필 생성
-- 🔄 **아바타 커스터마이징**: 사주 특성이 반영된 아바타 꾸미기
+- 🔄 **아바타 커스터마이징**: 사주 특성이 반영된 AI 아바타 생성
 - 🔄 **아바타 매칭**: 시각적 매력도를 고려한 매칭 옵션
 
 ### 🌐 **v1.3 (4차)** - 커뮤니티 기능
@@ -255,18 +254,9 @@ graph TB
 - 🔄 **프리미엄 기능**: 
   - 무제한 매칭
   - 상세 사주 분석 리포트  
-  - VIP 매칭 (프리미엄 회원끼리 우선 매칭)
   - 전문가 사주 상담 서비스
 
 <br><br><br>
-
-## 📊 성능 & 안정성
-
-### 🧪 **부하 테스트 결과**
-- **동시 접속자**: 1,000명 이상 안정적 처리 확인
-- **매칭 속도**: 평균 3초 이내 최적 상대 추천  
-- **메시지 전송**: 실시간 지연시간 100ms 이하
-- **시스템 가용성**: 99.9% 업타임 달성
 
 ### 🔧 **모니터링 & 알림**
 - Docker 컨테이너 기반 서비스 상태 모니터링
@@ -275,38 +265,8 @@ graph TB
 
 <br><br><br>
 
-## 🚀 빠른 시작
-
-### 📋 **사전 준비사항**
-```bash
-- Java 17+
-- Docker & Docker Compose  
-- PostgreSQL 13+
-- Redis 7.0+
-```
-
-### ⚙️ **환경 설정**
-```bash
-# 프로젝트 클론
-git clone https://github.com/your-repo/destiny-chat.git
-cd destiny-chat
-
-# 환경변수 설정
-cp application-example.yml application-local.yml
-# application-local.yml 파일에서 DB 및 Redis 정보 수정
-
-# Docker 컨테이너 실행  
-docker-compose up -d
-
-# 애플리케이션 실행
-./gradlew bootRun
-```
-
 ### 🌐 **접속 정보**
 - **메인 서비스**: https://destiny-post.com
-- **API 문서**: http://localhost:8080/swagger-ui.html
-- **모니터링**: http://localhost:8080/actuator
-
 <br><br><br>
 
 ## 👥 개발팀
@@ -322,8 +282,6 @@ docker-compose up -d
 
 - 📧 **Email**: petfortune8996@gmail.com
 - 🌐 **Website**: https://destiny-post.com  
-- 📋 **Issues**: [GitHub Issues](https://github.com/your-repo/destiny-chat/issues)
-- 📖 **Documentation**: [API 문서](https://destiny-post.com/docs)
 
 ---
 
