@@ -250,13 +250,13 @@ graph TB
 
 ### 🔐 **보안 & 인증**
 - **JWT 기반 토큰 인증**: Access Token + Refresh Token 방식
-- **Redis 기반 세션 관리**: 토큰 블랙리스트 및 중복 로그인 방지
-- **Spring Security**: 엔드포인트별 접근 권한 제어
+- **Redis 기반 세션 관리**
+- **Spring Security**
 
 ### 📊 **데이터 처리**
-- **JPA + QueryDSL**: 복잡한 사주 분석 쿼리 최적화  
-- **Redis Caching**: 자주 조회되는 궁합 데이터 캐싱
-- **배치 처리**: 매칭 점수 갱신 및 통계 데이터 생성
+- **JPA + QueryDSL**
+- **Redis Caching**
+- **배치 처리**: 시간 조건 재화 갱신
 
 <br><br><br>
 
