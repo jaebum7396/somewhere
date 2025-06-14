@@ -117,18 +117,24 @@ graph TB
     Eureka -.-> UserService[👥 User Service<br/>회원 관리]
     Eureka -.-> UserInfoService[📋 User Info Service<br/>사용자 정보]
     Eureka -.-> MatcherService[💕 Matcher Service<br/>매칭 알고리즘]
-    Eureka -.-> SocketPublisher[📡 Socket Publisher<br/>메시지 발행]
+    Eureka -.-> SocketPublisher1[📡 Socket Publisher #1<br/>메시지 발행]
+    Eureka -.-> SocketPublisher2[📡 Socket Publisher #2<br/>메시지 발행]
+    Eureka -.-> SocketPublisher3[📡 Socket Publisher #3<br/>메시지 발행]
     Eureka -.-> LLMConnector[🤖 LLM Connector<br/>AI 대화 조언]
     Eureka -.-> LunarCalendar[🌙 Lunar Calendar<br/>음력 변환 & 사주]
     
     Gateway --> UserService
     Gateway --> UserInfoService
     Gateway --> MatcherService
-    Gateway --> SocketPublisher
+    Gateway --> SocketPublisher1
+    Gateway --> SocketPublisher2
+    Gateway --> SocketPublisher3
     Gateway --> LLMConnector
     Gateway --> LunarCalendar
     
-    SocketPublisher --> Redis[(🔴 Redis Streams<br/>메시지 큐)]
+    SocketPublisher1 --> Redis[(🔴 Redis Streams<br/>메시지 큐)]
+    SocketPublisher2 --> Redis
+    SocketPublisher3 --> Redis
     
     Redis --> MessageConsumer1[📥 Message Consumer #1<br/>CRUD 처리]
     Redis --> MessageConsumer2[📥 Message Consumer #2<br/>CRUD 처리]
@@ -138,7 +144,9 @@ graph TB
     MessageConsumer2 --> PostgreSQL
     MessageConsumer3 --> PostgreSQL
     
-    SocketPublisher --> WebSocket[🔌 WebSocket<br/>STOMP Protocol]
+    SocketPublisher1 --> WebSocket[🔌 WebSocket<br/>STOMP Protocol]
+    SocketPublisher2 --> WebSocket
+    SocketPublisher3 --> WebSocket
     WebSocket --> Client
     
     LLMConnector --> OpenAI[🧠 OpenAI GPT<br/>대화 분석 & 조언]
