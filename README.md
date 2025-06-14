@@ -2,7 +2,7 @@
   <img src="https://destiny-post.com/logo.png" alt="운명 사서함" width="50%">
 </p>
 
-<h3 align="center">🔮 국내 유일! 명리학 기반 사주 랜덤 채팅 서비스! 🔮</h3>
+<h3 align="center">🔮 명리학 기반 사주 랜덤 채팅 서비스! 🔮</h3>
 
 <p align="center">
   사주를 기반으로 운명적인 만남을 주선하는<br>
