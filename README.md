@@ -299,12 +299,8 @@ graph TB
 - Redis 연결 상태 및 메모리 사용량 추적
 - 실시간 에러 로그 및 알림 시스템
 
-<br><br><br>
-
 ### 🌐 **접속 정보**
 - **메인 서비스**: https://destiny-post.com
-
-<br><br><br>
 
 ## 👥 개발팀
 
@@ -312,8 +308,6 @@ graph TB
 |--------|--------|------|
 | 주재범 | [@jaebum7396](https://github.com/jaebum7396) | 아키텍처, 인프라, 프론트엔드, 백엔드 |
 | 배소연 | [@thdus12](https://github.com/thdus12) | 기획, 디자인, 프론트엔드, 백엔드 |
-
-<br><br><br>
 
 ## 📞 Contact & Support
 
