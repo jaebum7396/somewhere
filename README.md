@@ -242,8 +242,8 @@ graph TB
 ### ⚡ **실시간 통신 & 메시지 처리**
 - **STOMP over WebSocket**: 실시간 채팅 및 매칭 알림
 - **Redis Streams 기반 메시지 아키텍처**: 
-  - **Socket Publisher (병렬)**: WebSocket 연결 관리 및 실시간 메시지 발송
-  - **Message Consumer (병렬)**: Redis Stream에서 메시지 소비 및 배치 처리
+  - **Socket Publisher**: WebSocket 연결 관리 및 실시간 메시지 발송
+  - **Message Consumer**: Redis Stream에서 메시지 소비 및 배치 처리
   - **높은 처리량과 장애 격리**: 독립적 서비스 운영으로 안정성 확보
 - **Redis Pub/Sub**: 채팅방 알림 및 상태 변경 실시간 브로드캐스트
 - **LLM Connector**: AI 대화 조언을 위한 독립적 LLM 통신 서비스
