@@ -32,7 +32,7 @@
 
 ## 📷 DEMO
 | 메인 화면 | 매치 화면 | 채팅 화면 |
-|:--:|:--:|
+|:--:|:--:|:--:|
 | <img width="200" alt="메인" src="https://github.com/user-attachments/assets/58ba9c8f-7f64-4601-ad60-b472f007c4f6" /> | <img width="200" alt="매치" src="https://github.com/user-attachments/assets/328ef8df-4680-4c0c-adf9-e707792593be" /> | <img width="200" alt="채팅" src="https://github.com/user-attachments/assets/27888d6d-fde3-4ebf-ae77-d7cc6c58f41f" /> |
 
 <br><br><br>
@@ -76,6 +76,8 @@
 - Redis를 활용한 실시간 세션 관리
 - 부적절한 내용 필터링 및 신고 시스템
 - 개인정보 보호를 위한 단계적 정보 공개
+
+<br><br><br>
 
 ## 🛠️ 기술 스택
 
@@ -237,6 +239,7 @@ graph TB
 1. **User Info → Lunar Calendar** → 사주 생성 및 오늘의 운세 계산
 2. **Matcher → User Info** → 사주 정보 기반 매칭 대상 선별
 3. **Matcher → LLM Connector** → AI 기반 궁합 분석 및 매칭 점수 산출
+4. **Socket Publisher (병렬)** → 실시간 매칭 결과 전송
 
 ### ⚡ **실시간 통신 & 메시지 처리**
 - **STOMP over WebSocket**: 실시간 채팅 및 매칭 알림
@@ -249,10 +252,12 @@ graph TB
 
 ### 🔐 **보안 & 인증**
 - **JWT 기반 토큰 인증**: Access Token + Refresh Token 방식
-- **Redis 기반 세션 관리**
+- **Redis 기반 세션 관리**: 토큰 블랙리스트 및 중복 로그인 방지
+- **Spring Security**: 엔드포인트별 접근 권한 제어
 
 ### 📊 **데이터 처리**
 - **JPA + QueryDSL**: 복잡한 사주 분석 쿼리 최적화  
+- **Redis Caching**: 자주 조회되는 궁합 데이터 캐싱
 - **배치 처리**: 매칭 점수 갱신 및 통계 데이터 생성
 
 <br><br><br>
@@ -295,8 +300,39 @@ graph TB
 - Redis 연결 상태 및 메모리 사용량 추적
 - 실시간 에러 로그 및 알림 시스템
 
+<br><br><br>
+
+## 🚀 빠른 시작
+
+### 📋 **사전 준비사항**
+```bash
+- Java 17+
+- Docker & Docker Compose  
+- PostgreSQL 13+
+- Redis 7.0+
+```
+
+### ⚙️ **환경 설정**
+```bash
+# 프로젝트 클론
+git clone https://github.com/your-repo/destiny-chat.git
+cd destiny-chat
+
+# 환경변수 설정
+cp application-example.yml application-local.yml
+# application-local.yml 파일에서 DB 및 Redis 정보 수정
+
+# Docker 컨테이너 실행  
+docker-compose up -d
+
+# 애플리케이션 실행
+./gradlew bootRun
+```
+
 ### 🌐 **접속 정보**
 - **메인 서비스**: https://destiny-post.com
+
+<br><br><br>
 
 ## 👥 개발팀
 
