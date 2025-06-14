@@ -108,7 +108,6 @@
 
 ### 🔄 **마이크로서비스 아키텍처**
 
-```mermaid
 graph TB
     Client[👤 클라이언트] --> Gateway[🌐 API Gateway<br/>destiny-post.com]
     
@@ -132,6 +131,13 @@ graph TB
     Gateway --> LLMConnector
     Gateway --> LunarCalendar
     
+    UserInfoService -->|사주 요청| LunarCalendar
+    LunarCalendar -->|사주/운세 데이터| UserInfoService
+    
+    MatcherService -->|사주 정보 조회| UserInfoService
+    MatcherService -->|궁합 분석 요청| LLMConnector
+    LLMConnector -->|궁합 결과| MatcherService
+    
     SocketPublisher1 --> Redis[(🔴 Redis Streams<br/>메시지 큐)]
     SocketPublisher2 --> Redis
     SocketPublisher3 --> Redis
@@ -149,7 +155,7 @@ graph TB
     SocketPublisher3 --> WebSocket
     WebSocket --> Client
     
-    LLMConnector --> OpenAI[🧠 OpenAI GPT<br/>대화 분석 & 조언]
+    LLMConnector --> OpenAI[🧠 OpenAI GPT<br/>대화 분석 & 조언<br/>궁합 분석]
     
     UserService --> PostgreSQL
     UserInfoService --> PostgreSQL
@@ -157,10 +163,7 @@ graph TB
     LunarCalendar --> PostgreSQL
     
     Redis --> RedisCache[⚡ Redis Cache<br/>세션 & 토큰 관리]
-```
-
-**🏗️ 메시지 처리 플로우**
-```
+🏗️ 사주 기반 매칭 플로우
 ┌─────────────────────────────────────────────────────────┐
 │              🔍 Eureka Discovery Server                  │
 │                서비스 등록 & 발견                         │
@@ -169,25 +172,47 @@ graph TB
     ┌─────────────┼─────────────┬─────────────┬─────────────┐
     │             │             │             │             │
 ┌───▼───┐    ┌───▼───┐    ┌───▼───┐    ┌───▼───┐    ┌───▼───┐
-│ 👥    │    │ 📋    │    │ 💕    │    │ 🌙    │    │ 🤖    │
-│ User  │    │ User  │    │Matcher│    │Lunar  │    │ LLM   │
-│Service│    │ Info  │    │Service│    │Calendar│    │Connector│
-└───────┘    └───────┘    └───────┘    └───────┘    └───────┘
-                                │
-                                ▼
-                     ┌─────────────────┐
-                     │   📡 Socket     │
-                     │   Publisher     │
-                     │   (메시지 발행)   │
-                     └─────────┬───────┘
-                               │
+│ 👥    │    │ 📋    │◄──►│ 🌙    │    │ 💕    │    │ 🤖    │
+│ User  │    │ User  │    │Lunar  │    │Matcher│◄──►│ LLM   │
+│Service│    │ Info  │    │Calendar│    │Service│    │Connector│
+└───────┘    └───┬───┘    └───────┘    └───┬───┘    └───┬───┘
+                 │                         │            │
+                 │                         │            ▼
+                 │                         │     ┌─────────────┐
+                 │                         │     │ 🧠 OpenAI   │
+                 │                         │     │ • 궁합 분석  │
+                 │                         │     │ • 대화 조언  │
+                 │                         │     └─────────────┘
+                 │                         │
+                 └─────────────────────────┘
+                           
+        💫 매칭 프로세스 플로우:
+        
+        1️⃣ User Info ──사주 요청──► Lunar Calendar
+                    ◄─사주/운세─┘
+        
+        2️⃣ Matcher ──사주 정보 조회──► User Info
+        
+        3️⃣ Matcher ──궁합 분석 요청──► LLM Connector
+                  ◄─궁합 결과────┘        │
+                                        ▼
+                                   OpenAI GPT
+                
+                    ┌──────────────────────────┐
+                    │      📡 Socket Publisher │
+                    │        (병렬 구성)        │
+                    │  ┌─────┬─────┬─────┐     │
+                    │  │ #1  │ #2  │ #3  │     │
+                    │  └─────┴─────┴─────┘     │
+                    └──────────┬───────────────┘
+                               │ 메시지 발행
                                ▼
                      ┌─────────────────┐
                      │  🔴 Redis       │
                      │  Streams        │
                      │  (메시지 큐)     │
                      └─────────┬───────┘
-                               │
+                               │ 메시지 전달
                     ┌──────────┼──────────┐
                     │          │          │
                     ▼          ▼          ▼
@@ -198,13 +223,12 @@ graph TB
             └─────┬────┘ └─────┬────┘ └─────┬────┘
                   │            │            │
                   └────────────┼────────────┘
-                               │
+                               │ CRUD 처리
                                ▼
                     ┌─────────────────┐
                     │ 🐘 PostgreSQL   │
-                    │   CRUD 처리     │
+                    │   데이터 저장    │
                     └─────────────────┘
-```
 
 **💡 핵심 메시지 처리 흐름:**
 1. **Socket Publisher** → 실시간 메시지 발행
