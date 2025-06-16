@@ -37,7 +37,7 @@
 
 ---
 
-## 🧪 <h3 align="center"><strong><a href="https://dev.cli.destiny-post.com" target="_blank">✨개발 서버 체험하기(클릭 시 리다이렉트 됩니다.)</a></strong></h3>
+## <h3><strong><a href="https://dev.cli.destiny-post.com" target="_blank">✨개발 서버 체험하기(클릭 시 리다이렉트 됩니다.)</a></strong></h3>
 
 <div>
 
