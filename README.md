@@ -5,17 +5,29 @@
 <h3 align="center">🔮 명리학 기반 사주 랜덤 채팅 서비스! 🔮</h3>
 
 <p align="center">
-  사주를 기반으로 운명적인 만남을 주선하는<br>
-  새로운 개념의 매칭 & 채팅 플랫폼!<br>
-  당신의 사주를 분석해 최고의 상대를 찾아드리고, 대화에 도움이 되는 맞춤 조언까지!<br><br>
-  ✨ <strong><a href="https://dev.cli.destiny-post.com" target="_blank">개발 서버 체험하기</a></strong>
+ 사주를 기반으로 운명적인 만남을 주선하는<br>
+ 새로운 개념의 매칭 & 채팅 플랫폼!<br>
+ 당신의 사주를 분석해 최고의 상대를 찾아드리고, 대화에 도움이 되는 맞춤 조언까지!<br><br>
+ ✨ <strong><a href="https://dev.cli.destiny-post.com" target="_blank">개발 서버 체험하기</a></strong>
 </p>
-## 개발서버 유저정보##
-```
-user001~100 @test.com / test1
-```
 
-<br><br><br>
+---
+
+## 🧪 개발서버 테스트 계정
+
+<div align="center">
+
+### 💝 체험용 계정 정보
+
+| 계정 범위 | 이메일 | 비밀번호 |
+|:---:|:---:|:---:|
+| **user001 ~ user100** | `@test.com` | `test1` |
+
+> 💡 **사용 예시**: `user001@test.com` / `test1`
+
+</div>
+
+---
 
 ## 🌟 프로젝트 소개
 **운명 사서함**은 전통 명리학과 현대 기술을 결합한 혁신적인 랜덤 채팅 서비스입니다.
