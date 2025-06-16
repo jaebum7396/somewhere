@@ -33,7 +33,7 @@
 |:--:|:--:|:--:|
 | <img width="200" alt="메인" src="https://github.com/user-attachments/assets/328ef8df-4680-4c0c-adf9-e707792593be" /> | <img width="200" alt="매치" src="https://github.com/user-attachments/assets/58ba9c8f-7f64-4601-ad60-b472f007c4f6" /> | <img width="200" alt="채팅" src="https://github.com/user-attachments/assets/27888d6d-fde3-4ebf-ae77-d7cc6c58f41f" /> |
 
- ✨ <h4 align="center"><strong><a href="https://dev.cli.destiny-post.com" target="_blank">개발 서버 체험하기</a></strong></h4>
+ ✨ <h3 align="center"><strong><a href="https://dev.cli.destiny-post.com" target="_blank">개발 서버 체험하기(클릭 시 리다이렉트 됩니다.)</a></strong></h3>
 </p>
 
 ---
