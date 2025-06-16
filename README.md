@@ -8,26 +8,6 @@
  사주를 기반으로 운명적인 만남을 주선하는<br>
  새로운 개념의 매칭 & 채팅 플랫폼!<br>
  당신의 사주를 분석해 최고의 상대를 찾아드리고, 대화에 도움이 되는 맞춤 조언까지!<br><br>
- ✨ <strong><a href="https://dev.cli.destiny-post.com" target="_blank">개발 서버 체험하기</a></strong>
-</p>
-
----
-
-## 🧪 개발서버 테스트 계정
-
-<div align="center">
-
-### 💝 체험용 계정 정보
-
-| 계정 범위 | 이메일 | 비밀번호 |
-|:---:|:---:|:---:|
-| **user001 ~ user100** | `@test.com` | `test1` |
-
-> 💡 **사용 예시**: `user001@test.com` / `test1`
-
-</div>
-
----
 
 <br><br><br>
 
@@ -52,6 +32,27 @@
 | 메인 화면 | 매치 화면 | 채팅 화면 |
 |:--:|:--:|:--:|
 | <img width="200" alt="메인" src="https://github.com/user-attachments/assets/328ef8df-4680-4c0c-adf9-e707792593be" /> | <img width="200" alt="매치" src="https://github.com/user-attachments/assets/58ba9c8f-7f64-4601-ad60-b472f007c4f6" /> | <img width="200" alt="채팅" src="https://github.com/user-attachments/assets/27888d6d-fde3-4ebf-ae77-d7cc6c58f41f" /> |
+
+ ✨ <strong><a href="https://dev.cli.destiny-post.com" target="_blank">개발 서버 체험하기</a></strong>
+</p>
+
+---
+
+## 🧪 개발서버 테스트 계정
+
+<div align="center">
+
+### 💝 체험용 계정 정보
+
+| 계정 범위 | 이메일 | 비밀번호 |
+|:---:|:---:|:---:|
+| **user001 ~ user100** | `@test.com` | `test1` |
+
+> 💡 **사용 예시**: `user001@test.com` / `test1`
+
+</div>
+
+---
 
 <br><br><br>
 
