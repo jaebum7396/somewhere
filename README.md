@@ -8,8 +8,12 @@
   사주를 기반으로 운명적인 만남을 주선하는<br>
   새로운 개념의 매칭 & 채팅 플랫폼!<br>
   당신의 사주를 분석해 최고의 상대를 찾아드리고, 대화에 도움이 되는 맞춤 조언까지!<br><br>
-  ✨ <strong><a href="https://destiny-post.com" target="_blank">지금 바로, 운명적인 만남을 시작해보세요</a></strong>
+  ✨ <strong><a href="https://dev.cli.destiny-post.com" target="_blank">개발 서버 체험하기</a></strong>
 </p>
+## 개발서버 유저정보##
+```
+user001~100 @test.com / test1
+```
 
 <br><br><br>
 
