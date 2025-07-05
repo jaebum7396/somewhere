@@ -28,10 +28,12 @@
 진정한 운명적 만남을 경험해보세요.
 <br><br><br>
 
-## 📷 DEMO
-| 메인 화면 | 매치 화면 | 채팅 화면 |
-|:--:|:--:|:--:|
-| <img width="200" alt="메인" src="https://github.com/user-attachments/assets/5629065b-796b-4c86-b70c-90a5f3f80049" /> | <img width="200" alt="매치" src="https://github.com/user-attachments/assets/58ba9c8f-7f64-4601-ad60-b472f007c4f6" /> | <img width="200" alt="채팅" src="https://github.com/user-attachments/assets/27888d6d-fde3-4ebf-ae77-d7cc6c58f41f" /> |
+## 📷 Screenshot
+<img width="180" alt="스크린샷1" src="https://github.com/user-attachments/assets/e064f562-5d9e-433b-bc57-bffcb7582527"/>
+<img width="180" alt="스크린샷2" src="https://github.com/user-attachments/assets/cc2362ad-83e9-450f-a70f-3b87d8ebf3a6"/>
+<img width="180" alt="스크린샷3" src="https://github.com/user-attachments/assets/09a81e32-b520-4d37-8349-83a350b6fd4c"/>
+<img width="180" alt="스크린샷4" src="https://github.com/user-attachments/assets/6a8f3a62-b39d-49d0-acb8-681fe166e424"/>
+<img width="180" alt="스크린샷5" src="https://github.com/user-attachments/assets/fd985a7f-6476-426c-a9c8-69f7001e1017"/>
 
 </p>
 <br>
