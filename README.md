@@ -290,7 +290,7 @@ graph TB
 - 🔄 실명 인증 기능
 - 🔄 신고기능 및 LLM 활용한 ID 차단 자동화 기능
 - 🔄 백오피스
-- 🔄 tensorflow 활용한 NSFW detector
+- 🔄 TensorFlow 활용한 NSFW detector
 - 🔄 안드로이드 및 앱스토어 출시
 
 ### 💫 **v1.1 (2차)** - 채팅 고도화
