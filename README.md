@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://dev.cli.destiny-post.com/logo.png" alt="somewhere" width="30%">
+  <img src="https://dev.cli.destiny-post.com/logo.png" alt="somewhere" width="50%">
 </p>
 
 <h3 align="center">💌 명리학 기반 사주 랜덤 채팅 서비스! 💌</h3>
