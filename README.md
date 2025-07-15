@@ -29,7 +29,7 @@
 <br><br><br>
 
 ## 📷 Screenshot
-<img width="160" alt="스크린샷1" src="https://github.com/user-attachments/assets/f192dc51-9d82-4358-b1ae-0630d5110321"/>
+<img width="160" alt="스크린샷1" src="https://github.com/user-attachments/assets/c3d96dd8-3db1-4059-a6b1-4f6f0229ed59"/>
 <img width="160" alt="스크린샷2" src="https://github.com/user-attachments/assets/6455a140-d01a-4c55-a321-eceb76b022e0"/>
 <img width="160" alt="스크린샷3" src="https://github.com/user-attachments/assets/f824723c-3995-4115-9a93-bf96600084b8"/>
 <img width="160" alt="스크린샷4" src="https://github.com/user-attachments/assets/6a8f3a62-b39d-49d0-acb8-681fe166e424"/>
