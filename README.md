@@ -29,9 +29,9 @@
 <br><br><br>
 
 ## 📷 Screenshot
-<img width="160" alt="스크린샷1" src="https://github.com/user-attachments/assets/e064f562-5d9e-433b-bc57-bffcb7582527"/>
-<img width="160" alt="스크린샷2" src="https://github.com/user-attachments/assets/cc2362ad-83e9-450f-a70f-3b87d8ebf3a6"/>
-<img width="160" alt="스크린샷3" src="https://github.com/user-attachments/assets/09a81e32-b520-4d37-8349-83a350b6fd4c"/>
+<img width="160" alt="스크린샷1" src="https://github.com/user-attachments/assets/f192dc51-9d82-4358-b1ae-0630d5110321"/>
+<img width="160" alt="스크린샷2" src="https://github.com/user-attachments/assets/6455a140-d01a-4c55-a321-eceb76b022e0"/>
+<img width="160" alt="스크린샷3" src="https://github.com/user-attachments/assets/f824723c-3995-4115-9a93-bf96600084b8"/>
 <img width="160" alt="스크린샷4" src="https://github.com/user-attachments/assets/6a8f3a62-b39d-49d0-acb8-681fe166e424"/>
 <img width="160" alt="스크린샷5" src="https://github.com/user-attachments/assets/fd985a7f-6476-426c-a9c8-69f7001e1017"/>
 
